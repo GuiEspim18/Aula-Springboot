@@ -5,7 +5,7 @@ import lombok.*;
 
 @Entity
 @Table(name = "products")
-// @Getter @Setter
+@Getter @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Product {
@@ -15,6 +15,14 @@ public class Product {
 
     private String name;
     private double price;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
