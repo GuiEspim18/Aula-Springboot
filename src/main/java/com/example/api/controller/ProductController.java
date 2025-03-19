@@ -46,8 +46,8 @@ public class ProductController {
             product.setName(productUpdated.getName());
             product.setPrice(productUpdated.getPrice());
 
-            Product produtoSalvo = productService.create(product);
-            return ResponseEntity.ok(produtoSalvo);
+            Product saveProduct = productService.create(product);
+            return ResponseEntity.ok(saveProduct);
         } else {
             return ResponseEntity.notFound().build();
         }
